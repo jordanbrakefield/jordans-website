@@ -1,0 +1,19 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Env files
+.env
+.env.local
+
+# Vite
+client/.vite/
+
+# System files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
