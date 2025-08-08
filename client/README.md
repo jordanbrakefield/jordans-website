@@ -1,12 +1,53 @@
-# React + Vite
+Welcome to my personal portfolio website! This site showcases my skills, projects, and experience as an aspiring software engineer.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+About Me
+I recently graduated with a Bachelor of Science in Software Engineering and am passionate about building impactful software solutions. Here, you can explore some of the projects I've worked on, my technical skills, and how to get in touch.
 
-Currently, two official plugins are available:
+Features
+Project Showcase: Detailed descriptions and links to my key projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Skills: Overview of programming languages, tools, and technologies I work with.
 
-## Expanding the ESLint configuration
+Contact: brak3field@gmail.com
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive Design: Optimized for viewing on desktops, tablets, and mobile devices.
+
+Technologies Used
+HTML5
+
+CSS3 / Tailwind CSS (or your CSS framework)
+
+Node.js / React
+
+MongoDB
+
+Express
+
+Git / GitHub for version control
+
+Getting Started
+To run this project locally:
+
+Clone the repository:
+
+bash
+git clone https://github.com/yourusername/your-portfolio.git
+Navigate into the project directory:
+
+bash
+cd your-portfolio
+Install dependencies (if any):
+
+bash
+npm install
+Start the development server:
+
+bash
+npm start
+Open your browser and go to http://localhost:5000.
+
+Deployment
+My portfolio is hosted on TBD.
+
+Contact
+Feel free to reach out via email at brak3field@gmail.com or connect with me on LinkedIn at https://www.linkedin.com/in/jordan-brakefield-69b151178/.
