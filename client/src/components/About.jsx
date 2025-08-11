@@ -12,21 +12,24 @@ export default function About() {
         <figure className="mt-10">
           <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
             <p>
-              Hi I'm Jordan, a Software Engineer
+              Hi! I'm Jordan 
+            </p>
+            <p>
+              Welcome to my corner of the web
             </p>
           </blockquote>
           <figcaption className="mt-10">
             <img
               alt=""
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-              className="mx-auto size-10 rounded-full"
+              src="src/assets/me.jpg"
+              className="mx-auto size-22 rounded-full"
             />
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold text-gray-900">Judith Black</div>
+              <div className="font-semibold text-gray-900">Jordan Brakefield</div>
               <svg width={3} height={3} viewBox="0 0 2 2" aria-hidden="true" className="fill-gray-900">
                 <circle r={1} cx={1} cy={1} />
               </svg>
-              <div className="text-gray-600">CEO of Workcation</div>
+              <div className="text-gray-600">Software Engineer</div>
             </div>
           </figcaption>
         </figure>
