@@ -55,7 +55,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right side icons */}
+          {/* { Right side icons
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
@@ -63,9 +63,9 @@ export default function Navbar() {
             >
               <span className="sr-only">View notifications</span>
               <BellIcon aria-hidden="true" className="h-6 w-6" />
-            </button>
+            </button> */}
 
-            {/* Profile dropdown */}
+            {/* { Profile dropdown }
             <Menu as="div" className="relative ml-3">
               <MenuButton className="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                 <span className="sr-only">Open user menu</span>
@@ -109,7 +109,7 @@ export default function Navbar() {
                 </MenuItem>
               </MenuItems>
             </Menu>
-          </div>
+          </div> } */}
         </div>
       </div>
 
