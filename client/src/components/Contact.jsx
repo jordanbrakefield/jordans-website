@@ -1,13 +1,11 @@
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
+import PageWrapper from './PageWrapper';
 
 export default function Contact() {
   return (
-    <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20" />
-      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-
+    <PageWrapper>
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contact sales</h2>
+        <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Contact Me</h2>
         <p className="mt-2 text-lg/8 text-gray-600">
           Aute magna irure deserunt veniam aliqua magna enim voluptate.
         </p>
@@ -147,6 +145,6 @@ export default function Contact() {
           </button>
         </div>
       </form>
-    </section>
+    </PageWrapper>
   );
 }
