@@ -2,6 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+//define the express router
 const router = express.Router();
 
 router.get('/test', (req, res) => {
@@ -9,16 +10,19 @@ router.get('/test', (req, res) => {
   res.json({ message: "Hello from /api/messages/test" });
 });
 
+//assigning values to contact form fields via the post request
 router.post('/', async (req, res) => {
   const { firstName, lastName, company, email, phoneNumber, message } = req.body;
 
   console.log('Contact form request received:', req.body);
-
+ 
+  //validate email format
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email || !emailRegex.test(email)) {
     return res.status(400).json({ error: 'Invalid email address' });
   }
 
+  //use nodemailer to send contact form data via email
   try {
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
