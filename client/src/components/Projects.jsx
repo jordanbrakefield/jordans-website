@@ -24,7 +24,7 @@ export default function Projects() {
       </div>
 
       {projects.length === 0 ? (
-        <p className="mt-12 text-center text-lg text-gray-600">No Projects... yet.</p>
+        <p className="mt-12 text-center text-lg text-gray-600">Loading...</p>
       ) : (
         <div className="mt-16 space-y-12">
           {projects.map((project) => (
