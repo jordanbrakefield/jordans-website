@@ -7,7 +7,7 @@ export default function Home() {
         <figure className="mt-10">
           <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
             <p>
-              Hi! I'm Jordan 
+              Hi, I'm Jordan 
             </p>
             <p>
               Welcome to my corner of the web
