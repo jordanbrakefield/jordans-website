@@ -1,42 +1,3 @@
-// import { useEffect, useState } from 'react';
-
-// export default function Projects() {
-//   const [projects, setProjects] = useState([]);
-
-//   useEffect(() => {
-//     fetch('http://localhost:5000/api/projects')
-//       .then((res) => res.json())
-//       .then((data) => setProjects(data))
-//       .catch((err) => console.error('Error fetching projects:', err));
-//   }, []);
-
-//   return (
-//     <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
-//       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20" />
-//       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl ring-1 shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-
-//       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-//         <h1 className="text-center text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl mb-12">
-//           Projects
-//         </h1>
-
-//         {projects.length === 0 ? (
-//           <p className="text-center text-lg text-gray-600">No Projects... yet.</p>
-//         ) : (
-//           <ul className="space-y-10">
-//             {projects.map((project) => (
-//               <li key={project._id} className="rounded-lg bg-indigo-50 p-6 shadow-md">
-//                 <h3 className="text-2xl font-semibold text-indigo-900">{project.title}</h3>
-//                 <p className="mt-2 text-gray-700">{project.description}</p>
-//               </li>
-//             ))}
-//           </ul>
-//         )}
-//       </div>
-//     </section>
-//   );
-// }
-
 import { useEffect, useState } from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import PageWrapper from '../components/PageWrapper';
@@ -63,7 +24,7 @@ export default function Projects() {
       </div>
 
       {projects.length === 0 ? (
-        <p className="mt-12 text-center text-lg text-gray-600">No Projects... yet.</p>
+        <p className="mt-12 text-center text-lg text-gray-600">Loading...</p>
       ) : (
         <div className="mt-16 space-y-12">
           {projects.map((project) => (
