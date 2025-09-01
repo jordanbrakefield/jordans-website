@@ -4,6 +4,7 @@ import PageWrapper from '../components/PageWrapper';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
+  const [filter, setFilter] = useState("software"); // default view
 
   useEffect(() => {
     fetch('http://localhost:5000/api/projects')
@@ -11,6 +12,10 @@ export default function Projects() {
       .then((data) => setProjects(data))
       .catch((err) => console.error('Error fetching projects:', err));
   }, []);
+
+  const filteredProjects = projects.filter(
+    (project) => project.category === filter // assumes each project has category: "software" | "hardware"
+  );
 
   return (
     <PageWrapper>
@@ -21,13 +26,39 @@ export default function Projects() {
         <p className="mt-2 text-lg text-gray-600">
           A selection of my recent work and experiments.
         </p>
+
+        {/* Toggle Switch */}
+        <div className="mt-6 flex justify-center">
+          <div className="inline-flex rounded-full border border-gray-300 bg-gray-100 p-1">
+            <button
+              className={`px-4 py-2 rounded-full text-sm font-medium ${
+                filter === "software"
+                  ? "bg-indigo-600 text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+              onClick={() => setFilter("software")}
+            >
+              Software
+            </button>
+            <button
+              className={`px-4 py-2 rounded-full text-sm font-medium ${
+                filter === "hardware"
+                  ? "bg-indigo-600 text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+              onClick={() => setFilter("hardware")}
+            >
+              Hardware
+            </button>
+          </div>
+        </div>
       </div>
 
-      {projects.length === 0 ? (
+      {filteredProjects.length === 0 ? (
         <p className="mt-12 text-center text-lg text-gray-600">Loading...</p>
       ) : (
         <div className="mt-16 space-y-12">
-          {projects.map((project) => (
+          {filteredProjects.map((project) => (
             <div
               key={project._id}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
@@ -35,11 +66,11 @@ export default function Projects() {
               <div className="flex flex-col md:flex-row">
                 {/* Image Section */}
                 {project.image && (
-                  <div className="md:w-1/2 relative overflow-hidden group">
+                  <div className="md:w-1/2 h-64 relative overflow-hidden group">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover object-center transition-transform duration-1000 ease-in-out transform group-hover:translate-y-[-50%]"
+                      className="w-full h-full object-contain bg-gray-300 object-center transition-transform duration-1000 ease-in-out transform group-hover:translate-x-[5%]"
                     />
                   </div>
                 )}

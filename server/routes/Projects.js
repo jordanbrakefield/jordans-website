@@ -23,5 +23,25 @@ router.post('/', async (req, res) => {
   }
 });
 
+// PUT update a project by ID
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedProject = await Project.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true } // returns the updated doc and validates schema
+    );
+
+    if (!updatedProject) {
+      return res.status(404).json({ error: 'Project not found' });
+    }
+
+    res.json(updatedProject);
+  } catch (err) {
+    res.status(400).json({ error: 'Failed to update project' });
+  }
+});
+
+
 module.exports = router;
 

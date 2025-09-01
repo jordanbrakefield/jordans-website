@@ -5,7 +5,8 @@ const ProjectSchema = new mongoose.Schema({
   description: String,
   technologies: [String],
   githubLink: String,
-  image: String
+  image: String,
+  category: {type: String, enum:['software', 'hardware'], required: true}
 });
 
 module.exports = mongoose.model('Project', ProjectSchema);
